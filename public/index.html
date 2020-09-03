@@ -32,6 +32,29 @@
   <!-- load your handlers -->
   <script src='../src/handlers/toggle-completed.js'></script>
 
+  <form action="" method="POST" onsubmit="">
+    <input type="text" id="name" placeholder="name">
+    <input type="text" id="email" placeholder="email">
+    <input type="submit" value="Add">
+  </form>
+  
+  <div id="spoiler" role="aria-hidden">
+    <form action="" method="POST" id="saveEdit">
+      <input type="text" id="edit-name">
+      <input type="submit" value="Edit" /> <a onclick="" aria-label="Close">&#10006;</a>
+    </form>
+  </div>
+  
+  <p id="counter"></p>
+  
+  <table>
+    <tr>
+      <th>Names</th>
+      <th>emails</th>
+    </tr>
+      <tbody id="list">
+      </tbody>
+  </table>
 
   <!-- initialize the web page -->
   <script src='../src/data.js'></script>
