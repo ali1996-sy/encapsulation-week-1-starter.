@@ -21,7 +21,9 @@
 
 const app = {
   _state: {
-    todos: []
+    todos: [],
+    names:['ali'] ,
+  emails:['ali@gamil.com']
   },
   get state() {
     return this._state;
@@ -29,12 +31,28 @@ const app = {
   set state(newState) {
     this._state = newState
   },
+  
+  getNames: function() {
+    var data = '';
 
-  toggleCompleted: function (position) {
-    if (position < 0 || this._state.todos.length <= position) {
-      return;
+    if (this.names.length > 0) {
+      for (i = 0; i < this.state.names.length; i++) {
+        data += '<tr>';
+        data += '<td>' + this.state.names[i] + '</td>';
+        data += '</tr>';
+      }
     }
-    const todo = this._state.todos[position];
-    todo.completed = !todo.completed;
-  }
+    return this.el.innerHTML = data;
+  },
+  getEmails: function() {
+    var data = '';
+
+    if (this.emails.length > 0) {
+      for (i = 0; i < this.state.emails.length; i++) {
+        data += '<tr>';
+        data += '<td>' + this.state.emails[i] + '</td>';
+        data += '</tr>';
+      }
+    }
+    return this.el.innerHTML = data;}
 }
