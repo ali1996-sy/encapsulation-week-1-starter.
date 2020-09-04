@@ -34,7 +34,7 @@ const app = {
   
   displayNames() {
     var data = '';
-    element=document.getElementById('list');
+     element=document.getElementById('list');
     if (this.names.length > 0) {
       for (i = 0; i < this.state.names.length; i++) {
         data += '<tr>';
