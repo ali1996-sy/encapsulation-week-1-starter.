@@ -32,9 +32,9 @@ const app = {
     this._state = newState
   },
   
-  getNames: function() {
+  displayNames(element) {
     var data = '';
-
+    element=document.getElementById('list');
     if (this.names.length > 0) {
       for (i = 0; i < this.state.names.length; i++) {
         data += '<tr>';
@@ -42,11 +42,11 @@ const app = {
         data += '</tr>';
       }
     }
-    return this.el.innerHTML = data;
+    return this.element.innerHTML += data;
   },
-  getEmails: function() {
+  displayEmails (element) {
     var data = '';
-
+    element=document.getElementById('list');
     if (this.emails.length > 0) {
       for (i = 0; i < this.state.emails.length; i++) {
         data += '<tr>';
@@ -54,5 +54,5 @@ const app = {
         data += '</tr>';
       }
     }
-    return this.el.innerHTML = data;}
+    return this.element.innerHTML += data;}
 }
