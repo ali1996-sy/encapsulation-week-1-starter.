@@ -11,7 +11,8 @@ const toggleCompletedHandler = (event) => {
   // update state using app method
   const todoIndex = Number(target.id);
   app.toggleCompleted(todoIndex);
-
+  app.getNames;
+  app.getEmails;
   logger.push({
     action: 'toggle todo',
     event,

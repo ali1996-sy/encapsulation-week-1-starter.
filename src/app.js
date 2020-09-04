@@ -35,10 +35,10 @@ const app = {
   getNames: function() {
     var data = '';
 
-    if (this.names.length > 0) {
-      for (i = 0; i < this.state.names.length; i++) {
+    if (this._names.length > 0) {
+      for (i = 0; i < this._state.names.length; i++) {
         data += '<tr>';
-        data += '<td>' + this.state.names[i] + '</td>';
+        data += '<td>' + this._state.names[i] + '</td>';
         data += '</tr>';
       }
     }
@@ -48,9 +48,9 @@ const app = {
     var data = '';
 
     if (this.emails.length > 0) {
-      for (i = 0; i < this.state.emails.length; i++) {
+      for (i = 0; i < this._state.emails.length; i++) {
         data += '<tr>';
-        data += '<td>' + this.state.emails[i] + '</td>';
+        data += '<td>' + this._state.emails[i] + '</td>';
         data += '</tr>';
       }
     }
