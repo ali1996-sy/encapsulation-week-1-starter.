@@ -32,7 +32,7 @@ const app = {
     this._state = newState
   },
   
-  displayNames(element) {
+  displayNames() {
     var data = '';
     element=document.getElementById('list');
     if (this.names.length > 0) {
@@ -44,7 +44,7 @@ const app = {
     }
     return this.element.innerHTML += data;
   },
-  displayEmails (element) {
+  displayEmails () {
     var data = '';
     element=document.getElementById('list');
     if (this.emails.length > 0) {
