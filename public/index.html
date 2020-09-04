@@ -14,44 +14,49 @@
   <div id='root'></div>
 
   <!-- load the testing & reviewing dependencies -->
+  
+  
+  
+  <script src='../lib/logger.js'></script>
+  <script src='../lib/review-buttons.js'></script> 
   <script src='../lib/gremlins.js'></script>
   <script src='../lib/chai-and-chai-dom.js'></script>
   <script src='../lib/describe-it.js'></script>
   <script src='../lib/deep-clone.js'></script>
-  <script src='../lib/logger.js'></script>
-  <script src='../lib/review-buttons.js'></script>
-
-  <!-- load & test the app object -->
   <script src='../src/app.js'></script>
-  <script src='../src/app.spec.js'></script>
+  <!-- load & test the app object 
+  
+  <script src='../src/app.spec.js'></script> -->
 
   <!-- load your views -->
   <script src='../src/views/render-todos.js'></script>
 
 
-  <!-- load your handlers -->
-  <script src='../src/handlers/toggle-completed.js'></script>
-
-  <form action="" method="POST" onsubmit="">
+ 
+    <div id="inputs">
+  
     <input type="text" id="name" placeholder="name">
     <input type="text" id="email" placeholder="email">
-    <input type="submit" value="Add">
-  </form>
+    <a onclick="app.AddSomeone()" > <button>&#x2B;</button></a>
+    
+  </div>
 
-  
-  <p id="counter"></p>
   
   <table>
     <tr>
       <th>Names</th>
       <th>emails</th>
     </tr>
-      <tbody id="list">
-      </tbody>
-  </table>
+    <tbody id="list">
 
+    </tbody>
+      
+  </table>
   <!-- initialize the web page -->
   <script src='../src/data.js'></script>
+   <!-- load your handlers -->
+   <script src='../src/handlers/toggle-completed.js'></script>
+
   <script src='../src/init.js'></script>
 </body>
 

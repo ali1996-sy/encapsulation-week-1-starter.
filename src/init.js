@@ -9,8 +9,8 @@ window.onload = () => {
   const todosView = renderTodos(app.state.todos);
   todosView.addEventListener('change', toggleCompletedHandler); // event delegation!
   document.getElementById('root').appendChild(todosView);
-
-
+  app.displayList();
+  
   // log the initiation
   logger.push({
     initialState,

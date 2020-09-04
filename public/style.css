@@ -1,0 +1,20 @@
+table {
+    border-collapse: collapse;
+    position: relative;
+    left: 40%;
+    top: 40%;
+  }
+  #inputs{
+    border:  solid black;
+    position: relative;
+    
+    top: 20%;
+    margin:  2%;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+html{
+    background-color: rgb(29, 113, 134);
+  }

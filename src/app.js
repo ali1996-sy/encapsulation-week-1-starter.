@@ -22,37 +22,58 @@
 const app = {
   _state: {
     todos: [],
-    names:['ali'] ,
-  emails:['ali@gamil.com']
+    names:[] ,
+  emails:[]
   },
   get state() {
     return this._state;
   },
   set state(newState) {
-    this._state = newState
+    this._state = newState;
   },
   
-  getNames: function() {
+  displayList() {
     var data = '';
-
-    if (this._names.length > 0) {
-      for (i = 0; i < this._state.names.length; i++) {
+    const element=document.getElementById('list');
+    element.innerHTML='';
+    if (this._state.names.length > 0) {
+      for (let i = 0; i < this._state.names.length; i++) {
         data += '<tr>';
-        data += '<td>' + this._state.names[i] + '</td>';
+        data += '<td>' + this._state.names[i] + '</td>'+'<td>' + this._state.emails[i] + '</td>';
         data += '</tr>';
       }
     }
-    return this.el.innerHTML = data;
+    
+    return element.innerHTML += data;
   },
-  getEmails: function() {
+  AddSomeone : function () {
+   let  eleName = document.getElementById('name');
+    let eleEmail = document.getElementById('email');
+    // Get the value
+    let name = eleName.value;
+    let email=eleEmail.value;
+    if (name&&email) {
+      // Add the new value
+      this._state.emails.push(email);
+      this._state.names.push(name);
+      // Reset input value
+      eleName.value = '';
+      eleEmail.value='';
+      // Dislay the new list
+       
+      this.displayList();
+    }
+  }
+/*  displayEmails () {
     var data = '';
-
-    if (this.emails.length > 0) {
-      for (i = 0; i < this._state.emails.length; i++) {
+    console.log(document);
+    const element=document.getElementById("list");
+    if (this._state.emails.length > 0) {
+      for (let i = 0; i < this._state.emails.length; i++) {
         data += '<tr>';
         data += '<td>' + this._state.emails[i] + '</td>';
         data += '</tr>';
       }
     }
-    return this.el.innerHTML = data;}
+    return element.innerHTML += data;}*/
 }
